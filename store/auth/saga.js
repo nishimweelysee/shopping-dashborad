@@ -23,7 +23,7 @@ export function* loginSaga() {
         yield put(loginSuccess(data.data,data.accessToken));
         modalSuccess('success');
     } catch (err) {
-        console.log(err);
+        // console.log(err);
     }
 }
 

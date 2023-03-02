@@ -1041,8 +1041,7 @@ function* loginSaga() {
     const data = JSON.parse(localStorage.getItem('ikimina'));
     yield Object(effects_["put"])(Object(auth_action["e" /* loginSuccess */])(data.data, data.accessToken));
     modalSuccess('success');
-  } catch (err) {
-    console.log(err);
+  } catch (err) {// console.log(err);
   }
 }
 function* logOutSaga() {

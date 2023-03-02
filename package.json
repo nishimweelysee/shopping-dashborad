@@ -12,6 +12,7 @@
     },
     "dependencies": {
         "@ant-design/icons": "^5.0.1",
+        "@netlify/plugin-nextjs": "^4.30.4",
         "@zeit/next-sass": "^1.0.1",
         "antd": "^5.2.3",
         "apexcharts": "^3.22.2",
@@ -43,5 +44,5 @@
     "engines": {
         "node": "14.17.0",
         "npm": "6.14.13"
-      }
+    }
 }
