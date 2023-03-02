@@ -1,14 +1,14 @@
 import { route } from 'next/dist/next-server/server/router';
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
-import { useStore} from 'react-redux';
+import { useStore } from 'react-redux';
 import { logOut } from '~/store/auth/action';
 import routeConfig from './RouteConfig';
 
 const withAuth = (Component) => (allowedRole) => (props) => {
   // getting the auth state from redux store
   const store = useStore();
-  const {isLoggedIn,user}= store.getState().auth;
+  const { isLoggedIn, user } = store.getState().auth;
   const role = user.data && user.data.user.category;
   const router = useRouter();
 
@@ -16,15 +16,17 @@ const withAuth = (Component) => (allowedRole) => (props) => {
   const [isValidRoute, setIsValidRoute] = useState(false);
 
   useEffect(() => {
-    const jwtPayload = JSON.parse(window.atob(user.accessToken.split('.')[1]));
-    let dateNow = new Date();
-    if (jwtPayload.exp * 1000 < dateNow.getTime()) {
-      localStorage.removeItem('ikimina');
-      props.dispatch(logOut());
+    if (user && user.accessToken) {
+      const jwtPayload = JSON.parse(window.atob(user.accessToken.split('.')[1]));
+      let dateNow = new Date();
+      if (jwtPayload.exp * 1000 < dateNow.getTime()) {
+        localStorage.removeItem('ikimina');
+        props.dispatch(logOut());
+      }
     }
     // first condition is to check if logged in and if on wrong path
     // then route to default route of the particular role user is of
-    if ( isLoggedIn && (allowedRole.indexOf(role) == -1 || !routeConfig[role][router.pathname])) {
+    if (isLoggedIn && (allowedRole.indexOf(role) == -1 || !routeConfig[role][router.pathname])) {
       setIsValidRoute(false);
       router.push(routeConfig[role].default);
     }
