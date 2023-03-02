@@ -1,18 +1,12 @@
 {
-  "./dev/noop": [
-    {
-      "id": "./node_modules/next/dist/client/dev/noop.js",
-      "file": "static/chunks/0.js"
-    }
-  ],
   "react-apexcharts": [
     {
-      "id": "./node_modules/apexcharts/dist/apexcharts.common.js",
-      "file": "static/chunks/1.js"
+      "id": "ujAs",
+      "file": "static/chunks/6c44d60f.f7cb553b52234b773d93.js"
     },
     {
-      "id": "./node_modules/react-apexcharts/dist/react-apexcharts.min.js",
-      "file": "static/chunks/1.js"
+      "id": "o+DJ",
+      "file": "static/chunks/9.ad26839508bc56a3b045.js"
     }
   ]
 }
