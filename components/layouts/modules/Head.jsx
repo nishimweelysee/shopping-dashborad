@@ -15,9 +15,9 @@ const StyleSheets = () => (
         <meta name="keywords" content="Cyamunara, react, ecommerce, Template" />
         <meta
             name="description"
-            content="Cyamunara - React eCommerce Template"
+            content="Cyamunara - Web"
         />
-        <title>Cyamunara | React eCommerce Admin Template</title>
+        <title>Cyamunara </title>
         <link
             href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&amp;amp;subset=latin-ext"
             rel="stylesheet"
