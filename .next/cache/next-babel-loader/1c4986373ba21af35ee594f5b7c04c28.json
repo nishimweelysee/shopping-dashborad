@@ -1,0 +1,1 @@
+{"ast":null,"code":"const Roles = {\n  customer: 'CLIENT',\n  vendor: 'VENDOR',\n  admin: 'ADMIN'\n};\nexport default Roles;","map":null,"metadata":{},"sourceType":"module"}

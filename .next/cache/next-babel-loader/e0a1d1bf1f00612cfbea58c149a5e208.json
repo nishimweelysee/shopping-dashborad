@@ -1,0 +1,1 @@
+{"ast":null,"code":"const {\n  notification\n} = require(\"antd\");\n\nexport const openNotification = (message, description, type) => {\n  notification[type]({\n    message,\n    description\n  });\n};","map":null,"metadata":{},"sourceType":"module"}

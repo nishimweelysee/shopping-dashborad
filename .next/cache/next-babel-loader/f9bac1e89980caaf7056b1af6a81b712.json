@@ -1,0 +1,1 @@
+{"ast":null,"code":"var _require = require(\"antd\"),\n    notification = _require.notification;\n\nexport var openNotification = function openNotification(message, description, type) {\n  notification[type]({\n    message: message,\n    description: description\n  });\n};","map":null,"metadata":{},"sourceType":"module"}
